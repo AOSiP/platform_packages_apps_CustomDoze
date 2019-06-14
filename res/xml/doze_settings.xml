@@ -26,13 +26,15 @@
         android:key="ambient_display"
         android:defaultValue="true"
         android:title="@string/ambient_display_notifications"
-        android:summary="@string/ambient_display_summary" />
+        android:summary="@string/ambient_display_summary"
+        android:icon="@drawable/ic_alert" />
 
     <SwitchPreference
         android:key="doze_on_charge"
         android:title="@string/doze_on_charge_title"
         android:summary="@string/doze_on_charge_summary"
-        android:defaultValue="false" />
+        android:defaultValue="false"
+        android:icon="@drawable/ic_charging" />
 
     <PreferenceCategory
         android:key="tilt_sensor"
@@ -42,7 +44,8 @@
         android:key="pick_up"
         android:defaultValue="false"
         android:title="@string/pick_up_title"
-        android:summary="@string/pick_up_summary" />
+        android:summary="@string/pick_up_summary"
+        android:icon="@drawable/ic_lift" />
 
     </PreferenceCategory>
 
@@ -54,13 +57,15 @@
             android:key="gesture_hand_wave"
             android:defaultValue="false"
             android:title="@string/hand_wave_gesture_title"
-            android:summary="@string/hand_wave_gesture_summary" />
+            android:summary="@string/hand_wave_gesture_summary"
+            android:icon="@drawable/ic_hand" />
 
         <SwitchPreference
             android:key="gesture_pocket"
             android:defaultValue="false"
             android:title="@string/pocket_gesture_title"
-            android:summary="@string/pocket_gesture_summary" />
+            android:summary="@string/pocket_gesture_summary"
+            android:icon="@drawable/ic_pocket" />
 
     </PreferenceCategory>
 
