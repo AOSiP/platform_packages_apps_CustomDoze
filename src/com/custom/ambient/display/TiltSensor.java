@@ -46,9 +46,9 @@ public class TiltSensor implements SensorEventListener {
     public TiltSensor(Context context) {
         mContext = context;
         mPowerManager = (PowerManager) mContext.getSystemService(Context.POWER_SERVICE);
-        mSensorManager = (SensorManager) mContext.getSystemService(Context.SENSOR_SERVICE);
+        mSensorManager = mContext.getSystemService(SensorManager.class);
         if (mSensorManager != null) {
-            mSensor = mSensorManager.getDefaultSensor(Sensor.TYPE_TILT_DETECTOR);
+            mSensor = Utils.getSensor(mSensorManager, "oneplus.sensor.pickup");
         }
         mSensorWakeLock = mPowerManager.newWakeLock(PowerManager.PARTIAL_WAKE_LOCK,
                 "SensorWakeLock");
