@@ -30,6 +30,17 @@
         android:summary="@string/ambient_display_summary"
         android:icon="@drawable/ic_bell"/>
 
+    <PreferenceCategory
+        android:key="doze_elements"
+        android:title="@string/doze_elements_title" >
+
+    <SwitchPreference
+            android:key="ambient_battery_percent"
+            android:title="@string/ambient_battery_percent_title"
+            android:summary="@string/ambient_battery_percent_summary"
+            android:defaultValue="true" />
+    </PreferenceCategory>
+
     <SwitchPreference
         android:key="doze_on_charge"
         android:defaultValue="false"

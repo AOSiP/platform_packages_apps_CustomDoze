@@ -15,6 +15,9 @@
 
     <string name="ambient_display_title">Ambient Display</string>
 
+    <string name="doze_trigger_title">When to show</string>
+    <string name="doze_elements_title">What to show</string>
+
     <string name="ambient_display_notifications">New notifications</string>
     <string name="ambient_display_summary">Wake screen when you receive notifications</string>
 
@@ -47,4 +50,11 @@
     <string name="reset_hidden_apps">Reset all</string>
 
     <string name="footer_info">If Always on is enabled, brightness gets recalculated to follow hardware specifications, so don\'t consider above values as absolute ones.\n\nLong press on the left text value to set it manually.</string>
+    <string name="double_tap_title">Double tap</string>
+    <string name="doze_double_tap_title">Double tap to check phone</string>
+    <string name="doze_double_tap_summary">Pulse notifications by a double tap</string>
+
+     <!-- Ambient display battery percentage -->
+    <string name="ambient_battery_percent_title">Battery level</string> 
+    <string name="ambient_battery_percent_summary">Show battery percent on the bottom while dozing</string>
 </resources>
