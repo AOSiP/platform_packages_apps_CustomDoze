@@ -74,6 +74,7 @@ public class DozeSettings extends PreferenceActivity implements PreferenceFragme
         private SwitchPreference mPickUpPreference;
         private SwitchPreference mHandwavePreference;
         private SwitchPreference mPocketPreference;
+        private SystemSettingSwitchPreference mMusicTickerPreference;
 
         @Override
         public void onCreatePreferences(Bundle savedInstanceState, String rootKey) {
@@ -88,6 +89,10 @@ public class DozeSettings extends PreferenceActivity implements PreferenceFragme
 
             mAoDPreference =
                 (SwitchPreference) findPreference(Utils.AOD_KEY);
+
+            mMusicTickerPreference =
+                (SystemSettingSwitchPreference) findPreference(Utils.MUSIC_TICKER_KEY);
+
             if (Utils.isAoDAvailable(mContext)) {
                 mAoDPreference.setChecked(Utils.isAoDEnabled(mContext));
                 mAoDPreference.setOnPreferenceChangeListener(this);
@@ -179,6 +184,7 @@ public class DozeSettings extends PreferenceActivity implements PreferenceFragme
             mPickUpPreference.setEnabled(!aodEnabled);
             mHandwavePreference.setEnabled(!aodEnabled);
             mPocketPreference.setEnabled(!aodEnabled);
+            mMusicTickerPreference.setEnabled(!aodEnabled);
         }
 
         @Override
