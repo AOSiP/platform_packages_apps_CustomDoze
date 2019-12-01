@@ -32,7 +32,6 @@ public class TiltSensor implements SensorEventListener {
     private static final String TAG = "TiltSensor";
 
     private static final int SENSOR_WAKELOCK_DURATION = 200;
-    private static final int BATCH_LATENCY_IN_MS = 100;
     private static final int MIN_PULSE_INTERVAL_MS = 2500;
     private static final int MIN_WAKEUP_INTERVAL_MS = 1000;
     private static final int WAKELOCK_TIMEOUT_MS = 300;
@@ -113,7 +112,7 @@ public class TiltSensor implements SensorEventListener {
     protected void enable() {
         if (DEBUG) Log.d(TAG, "Enabling");
         mSensorManager.registerListener(this, mSensor,
-                SensorManager.SENSOR_DELAY_NORMAL, BATCH_LATENCY_IN_MS * 1000);
+                SensorManager.SENSOR_DELAY_NORMAL);
 	if (Utils.raiseToWakeGestureEnabled(mContext)) {
 	    mSensorManager.registerListener(mProximityListener, mProximitySensor,
                     SensorManager.SENSOR_DELAY_NORMAL);
