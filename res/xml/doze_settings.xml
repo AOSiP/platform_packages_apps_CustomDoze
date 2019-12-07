@@ -14,7 +14,9 @@
      See the License for the specific language governing permissions and
      limitations under the License.
 -->
-<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+<PreferenceScreen
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:settings="http://schemas.android.com/apk/res-auto">
 
     <SwitchPreference
         android:key="always_on_ambient"
@@ -87,4 +89,24 @@
             android:icon="@drawable/ic_pocket" />
 
     </PreferenceCategory>
+
+    <PreferenceCategory
+        android:key="brightness"
+        android:title="@string/brightness_title" >
+
+        <com.aosip.support.preference.CustomSeekBarPreference
+            android:key="doze_brightness"
+            android:title="@string/ambient_doze_brightness_title"
+            android:max="255"
+            settings:min="1"
+            android:persistent="false" />
+
+        <com.aosip.support.preference.CustomSeekBarPreference
+            android:key="pulse_brightness"
+            android:title="@string/ambient_pulse_brightness_title"
+            android:max="255"
+            settings:min="1"
+            android:persistent="false" />
+    </PreferenceCategory>
+
 </PreferenceScreen>
