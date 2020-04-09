@@ -47,4 +47,8 @@
     <string name="reset_hidden_apps">Reset all</string>
 
     <string name="footer_info">If Always on is enabled, brightness gets recalculated to follow hardware specifications, so don\'t consider above values as absolute ones.\n\nLong press on the left text value to set it manually.</string>
+
+    <!-- Raise to wake strings-->
+    <string name="raise_to_wake_gesture_title">Raise to wake</string>
+    <string name="raise_to_wake_gesture_summary">Wake up the device instead of pulsing notification</string>
 </resources>
